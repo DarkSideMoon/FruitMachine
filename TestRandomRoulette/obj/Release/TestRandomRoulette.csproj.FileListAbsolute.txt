@@ -1,0 +1,9 @@
+D:\Flesh\FruitMachine\TestRandomRoulette\bin\Release\TestRandomRoulette.dll
+D:\Flesh\FruitMachine\TestRandomRoulette\bin\Release\TestRandomRoulette.pdb
+D:\Flesh\FruitMachine\TestRandomRoulette\bin\Release\RandomRouletteLibrary.dll
+D:\Flesh\FruitMachine\TestRandomRoulette\bin\Release\Newtonsoft.Json.dll
+D:\Flesh\FruitMachine\TestRandomRoulette\bin\Release\RandomRouletteLibrary.pdb
+D:\Flesh\FruitMachine\TestRandomRoulette\bin\Release\Newtonsoft.Json.xml
+D:\Flesh\FruitMachine\TestRandomRoulette\obj\Release\TestRandomRoulette.csprojResolveAssemblyReference.cache
+D:\Flesh\FruitMachine\TestRandomRoulette\obj\Release\TestRandomRoulette.dll
+D:\Flesh\FruitMachine\TestRandomRoulette\obj\Release\TestRandomRoulette.pdb

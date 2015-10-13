@@ -1,0 +1,9 @@
+F:\Work\MyProject\FruitMachine\TestRandomRoulette\obj\Debug\FruitMachineTest.csprojResolveAssemblyReference.cache
+F:\Work\MyProject\FruitMachine\TestRandomRoulette\bin\Debug\TestRandomRoulette.dll
+F:\Work\MyProject\FruitMachine\TestRandomRoulette\bin\Debug\TestRandomRoulette.pdb
+F:\Work\MyProject\FruitMachine\TestRandomRoulette\bin\Debug\RandomRouletteLibrary.dll
+F:\Work\MyProject\FruitMachine\TestRandomRoulette\bin\Debug\Newtonsoft.Json.dll
+F:\Work\MyProject\FruitMachine\TestRandomRoulette\bin\Debug\RandomRouletteLibrary.pdb
+F:\Work\MyProject\FruitMachine\TestRandomRoulette\bin\Debug\Newtonsoft.Json.xml
+F:\Work\MyProject\FruitMachine\TestRandomRoulette\obj\Debug\TestRandomRoulette.dll
+F:\Work\MyProject\FruitMachine\TestRandomRoulette\obj\Debug\TestRandomRoulette.pdb

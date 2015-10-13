@@ -1,0 +1,12 @@
+D:\Flesh\FruitMachine\RandomRouletteWcfREST\bin\RandomRouletteWcfREST.dll.config
+D:\Flesh\FruitMachine\RandomRouletteWcfREST\bin\RandomRouletteWcfREST.dll
+D:\Flesh\FruitMachine\RandomRouletteWcfREST\bin\RandomRouletteWcfREST.pdb
+D:\Flesh\FruitMachine\RandomRouletteWcfREST\bin\Microsoft.Web.Infrastructure.dll
+D:\Flesh\FruitMachine\RandomRouletteWcfREST\bin\Newtonsoft.Json.dll
+D:\Flesh\FruitMachine\RandomRouletteWcfREST\bin\RandomRouletteLibrary.dll
+D:\Flesh\FruitMachine\RandomRouletteWcfREST\bin\WebGrease.dll
+D:\Flesh\FruitMachine\RandomRouletteWcfREST\bin\Newtonsoft.Json.xml
+D:\Flesh\FruitMachine\RandomRouletteWcfREST\bin\RandomRouletteLibrary.pdb
+D:\Flesh\FruitMachine\RandomRouletteWcfREST\obj\Release\RandomRouletteWcfREST.csprojResolveAssemblyReference.cache
+D:\Flesh\FruitMachine\RandomRouletteWcfREST\obj\Release\RandomRouletteWcfREST.dll
+D:\Flesh\FruitMachine\RandomRouletteWcfREST\obj\Release\RandomRouletteWcfREST.pdb

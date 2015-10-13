@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RandomThreadRoulette", "RandomThreadRoulette\RandomThreadRoulette.csproj", "{BA427984-2571-41F9-BD81-5F2C6769B3C7}"
+	ProjectSection(ProjectDependencies) = postProject
+		{0F52779C-15FF-458E-BB9A-F74CC67ADEEB} = {0F52779C-15FF-458E-BB9A-F74CC67ADEEB}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RandomRouletteLibrary", "RandomRouletteLibrary\RandomRouletteLibrary.csproj", "{0F52779C-15FF-458E-BB9A-F74CC67ADEEB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestRandomRoulette", "TestRandomRoulette\TestRandomRoulette.csproj", "{5F14DC46-FACD-4B64-A3C4-29463A8A5D15}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RandomRouletteWcfREST", "RandomRouletteWcfREST\RandomRouletteWcfREST.csproj", "{B92C1D3D-908D-465B-9DA8-2689F8DD1809}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{BF838A7B-3FEB-48FE-8198-BC9E55092535}"
+	ProjectSection(SolutionItems) = preProject
+		VersionInfo.cs = VersionInfo.cs
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BA427984-2571-41F9-BD81-5F2C6769B3C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA427984-2571-41F9-BD81-5F2C6769B3C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA427984-2571-41F9-BD81-5F2C6769B3C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA427984-2571-41F9-BD81-5F2C6769B3C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F52779C-15FF-458E-BB9A-F74CC67ADEEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F52779C-15FF-458E-BB9A-F74CC67ADEEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F52779C-15FF-458E-BB9A-F74CC67ADEEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F52779C-15FF-458E-BB9A-F74CC67ADEEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F14DC46-FACD-4B64-A3C4-29463A8A5D15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F14DC46-FACD-4B64-A3C4-29463A8A5D15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F14DC46-FACD-4B64-A3C4-29463A8A5D15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F14DC46-FACD-4B64-A3C4-29463A8A5D15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B92C1D3D-908D-465B-9DA8-2689F8DD1809}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B92C1D3D-908D-465B-9DA8-2689F8DD1809}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B92C1D3D-908D-465B-9DA8-2689F8DD1809}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B92C1D3D-908D-465B-9DA8-2689F8DD1809}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

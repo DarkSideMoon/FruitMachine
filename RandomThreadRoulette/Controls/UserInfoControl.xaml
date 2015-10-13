@@ -1,0 +1,54 @@
+﻿<UserControl x:Class="RandomThreadRoulette.Controls.UserInfoControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008">
+
+    <StackPanel Orientation="Horizontal">
+        <StackPanel>
+            <TextBlock TextWrapping="Wrap" FontSize="16" FontWeight="Medium" Foreground="#FF654070" 
+                           Text="NickName " VerticalAlignment="Top" Margin="0,0,0.2,0"/>
+
+            <TextBlock HorizontalAlignment="Left" Margin="0,10,-0.8,0" Foreground="#FF654070"
+                           FontSize="14" TextWrapping="Wrap" Text="Points" VerticalAlignment="Top"/>
+
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Foreground="#FF654070" 
+                           FontSize="14" Text="Debt" VerticalAlignment="Top"/>
+
+            <TextBlock HorizontalAlignment="Left" Margin="0,10,0,0" Foreground="#FF654070" 
+                           FontSize="14" TextWrapping="Wrap" Text="Status" VerticalAlignment="Top"/>
+
+            <TextBlock HorizontalAlignment="Left" Margin="1,0,0,0" Foreground="#FF654070"
+                           FontSize="14" TextWrapping="Wrap" Text="Level" VerticalAlignment="Top"/>
+
+            <TextBlock Text="Your league is" Foreground="#FF654070" 
+                           FontSize="14" TextWrapping="Wrap"/>
+
+            <Image Source="{Binding LevelImage}" Height="100" Width="130">
+                <Image.OpacityMask>
+                    <RadialGradientBrush GradientOrigin="0.5,0.5" Center="0.5,0.5" RadiusX="0.85" RadiusY="0.85">
+                        <GradientStop Color="#FF9EBF8E" Offset="0.5" />
+                        <GradientStop Color="#00ffffff" Offset="0.6" />
+                    </RadialGradientBrush>
+                </Image.OpacityMask>
+            </Image>
+        </StackPanel>
+
+        <StackPanel Orientation="Vertical" Margin="8,0,0,0">
+            <TextBlock TextWrapping="Wrap" FontSize="16" FontWeight="Medium" Foreground="#FF654070" 
+                           Text="{Binding NickName}" VerticalAlignment="Top" Margin="0,0,0.2,0"/>
+
+            <TextBlock HorizontalAlignment="Left" Margin="0,10,-0.8,0" Foreground="#FF654070"
+                           FontSize="14" TextWrapping="Wrap" Text="{Binding CurrentPoints}" VerticalAlignment="Top"/>
+
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Foreground="#FF654070" 
+                           FontSize="14" Text="{Binding Debt}" VerticalAlignment="Top"/>
+
+            <TextBlock HorizontalAlignment="Left" Margin="0,10,0,0" Foreground="#FF654070"
+                           FontSize="14" TextWrapping="Wrap" Text="{Binding Status}" VerticalAlignment="Top"/>
+
+            <TextBlock HorizontalAlignment="Left" Margin="1,0,0,0" Foreground="#FF654070"
+                           FontSize="14" TextWrapping="Wrap" Text="{Binding Level}" VerticalAlignment="Top"/>
+        </StackPanel>
+    </StackPanel>
+</UserControl>

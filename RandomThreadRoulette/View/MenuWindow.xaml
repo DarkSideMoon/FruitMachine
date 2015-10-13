@@ -1,0 +1,282 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:classicTheme="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Classic"
+        xmlns:Controls="clr-namespace:RandomThreadRoulette.Controls" x:Class="RandomThreadRoulette.View.MenuWindow"
+        Title="MenuWindow" Height="498.6" Width="762.2" WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize" WindowStyle="None" Background="Transparent" AllowsTransparency="True">
+
+    <Window.Resources>
+
+        <Style TargetType="{x:Type ListBox}">
+            <Setter Property="ItemsPanel">
+                <Setter.Value>
+                    <ItemsPanelTemplate>
+                        <WrapPanel></WrapPanel>
+                    </ItemsPanelTemplate>
+                </Setter.Value>
+            </Setter>
+
+            <Setter Property="ItemTemplate">
+                <Setter.Value>
+                    <DataTemplate>
+                        <Controls:AchievementControl/>
+                    </DataTemplate>
+                </Setter.Value>
+            </Setter>
+
+            <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Hidden"/>
+        </Style>
+
+        <!-- Fade -->
+        <Storyboard x:Key="FadeIn">
+            <DoubleAnimation Duration="0:0:1.35" Storyboard.TargetProperty="Opacity" From="0" To="1" />
+        </Storyboard>
+        
+        <Storyboard x:Key="FadeOut">
+            <DoubleAnimation Duration="0:0:.55" Storyboard.TargetProperty="Opacity" To="0" />
+        </Storyboard>
+        <!-- Fade -->
+
+        <Style x:Key="btnGlass" TargetType="Button">
+
+            <Setter Property="FontSize" Value="14" />
+            <Setter Property="Foreground" Value="WhiteSmoke" />
+            <Setter Property="Template">
+                <Setter.Value>
+
+                    <ControlTemplate TargetType="Button">
+                        <!--#FFC12E50-->
+                        <Border x:Name="ButtonBorder" 
+                  CornerRadius="50" 
+                  BorderThickness="4" 
+                  Background="Red"
+                  BorderBrush="White"
+                  RenderTransformOrigin="0.5,0.5" Margin="0,0,21,0">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="1.7*"/>
+                                </Grid.RowDefinitions>
+                                <ContentPresenter x:Name="ButtonContentPresenter"
+                                VerticalAlignment="Center"  
+                                HorizontalAlignment="Center" 
+                                Grid.RowSpan="2" />
+                            </Grid>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="RenderTransform" TargetName="ButtonBorder">
+                                    <Setter.Value>
+                                        <TransformGroup>
+                                            <ScaleTransform ScaleX="0.9" ScaleY="0.9"/>
+                                        </TransformGroup>
+                                    </Setter.Value>
+                                </Setter>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="basicButton" TargetType="{x:Type Button}">
+            <Setter Property="Background" Value="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" />
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" />
+            <Setter Property="BorderBrush" Value="{x:Static classicTheme:ClassicBorderDecorator.ClassicBorderBrush}" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <classicTheme:ClassicBorderDecorator x:Name="ContentContainer" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="0" BorderStyle="None" Background="{TemplateBinding Background}" SnapsToDevicePixels="True">
+                            <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+                        </classicTheme:ClassicBorderDecorator>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsKeyboardFocused" Value="True">
+                                <Setter Property="BorderStyle" TargetName="ContentContainer" Value="RaisedFocused"/>
+                            </Trigger>
+                            <Trigger Property="IsDefaulted" Value="True">
+                                <Setter Property="BorderStyle" TargetName="ContentContainer" Value="RaisedFocused"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="BorderStyle" TargetName="ContentContainer" Value="RaisedPressed"/>
+                            </Trigger>
+                            <Trigger Property="ToggleButton.IsChecked" Value="True">
+                                <Setter Property="BorderStyle" TargetName="ContentContainer" Value="RaisedPressed"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+    </Window.Resources>
+
+    <Grid Margin="81,45,90.6,55.2" Background="Transparent">
+
+
+        <!-- Start background. Make coole background-->
+        <Border x:Name="blueBorder" Background="#FFDDE9FF" HorizontalAlignment="Left" Height="398" 
+    		Margin="2,0,-0.2,0" VerticalAlignment="Top" Width="589" RenderTransformOrigin="0.5,0.5">
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-6.291"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Border.RenderTransform>
+        </Border>
+
+        <Border x:Name="greenBorder" Background="#FFB2FF95" HorizontalAlignment="Left" Height="398" 
+    		Margin="2,0,-0.2,0" VerticalAlignment="Top" Width="589" RenderTransformOrigin="0.5,0.5">
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-3.474"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Border.RenderTransform>
+        </Border>
+
+        <Border x:Name="redBorder" Background="#FFFF9595" HorizontalAlignment="Left" Height="398" 
+    		Margin="2,0,-0.2,0" VerticalAlignment="Top" Width="589" RenderTransformOrigin="0.5,0.5">
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="7.466"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Border.RenderTransform>
+
+        </Border>
+
+        <Border x:Name="yellowBorder" Background="#FFFFF19A" HorizontalAlignment="Left" Height="398" 
+    		Margin="2,0,-0.2,0" VerticalAlignment="Top" Width="589" RenderTransformOrigin="0.5,0.5">
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="4.526"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Border.RenderTransform>
+
+        </Border>
+
+        <Border x:Name="mainBorder" Background="#CCFFFFFF" HorizontalAlignment="Left" 
+                Height="398" VerticalAlignment="Top" Width="591" RenderTransformOrigin="0.5,0.5" 
+                MouseLeftButtonDown="mainBorder_MouseLeftButtonDown" Margin="0,0,-0.2,0">
+        </Border>
+        <!-- End background -->
+
+        <Label x:Name="seperator" Background="#FF3D7ED1"  VerticalAlignment="Top" Height="2" Margin="29,262,9.8,0"/>
+        
+        <!--Main menu of game-->
+        <Canvas x:Name="mainMenu" Margin="29,24,327.6,186.2">
+            
+            <Border x:Name="borderSingle" BorderBrush="#00000000" BorderThickness="1" HorizontalAlignment="Left" Height="42" VerticalAlignment="Bottom" 
+        		Width="156" RenderTransformOrigin="0.5,0.5" Background="#AEF29B" Canvas.Left="132" Canvas.Top="-6">
+                <Border.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-371.851"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Border.RenderTransform>
+                <Button x:Name="btnSingleGame" Background="Transparent" Cursor="Hand" Style="{DynamicResource basicButton}" 
+                        Foreground="#184E5A" FontSize="18" FontWeight="Medium" Content="         Single Game" Click="btnSingleGame_Click"/>
+            </Border>
+
+            <Border x:Name="borderAchieve" BorderBrush="#00000000" BorderThickness="1" HorizontalAlignment="Left" Height="41" VerticalAlignment="Bottom" 
+        		Width="145" RenderTransformOrigin="0.5,0.5" Background="#FF4981F5" Canvas.Left="147" Canvas.Top="40">
+                <Border.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="15.281"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Border.RenderTransform>
+                <Button x:Name="btnGetAchievements" Background="Transparent" Cursor="Hand" Style="{DynamicResource basicButton}" 
+                        Foreground="#FFD0FF3D" FontSize="18" FontWeight="Medium" Content="Achievements" Margin="-12,0,0,0" Click="btnGetAchievements_Click"/>
+            </Border>
+
+            <Border x:Name="borderExit" BorderBrush="#00000000" BorderThickness="1" HorizontalAlignment="Left" Height="41" VerticalAlignment="Bottom" 
+        		Width="145" RenderTransformOrigin="0.5,0.5" Background="#218DA6" Canvas.Left="141" Canvas.Top="173">
+                <Border.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-367.604"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Border.RenderTransform>
+                <Button x:Name="btnExit" Background="Transparent" FontWeight="Medium" Cursor="Hand" Style="{DynamicResource basicButton}" Foreground="#FFFFA856" FontSize="18" Content="Exit" Click="btnExit_Click"></Button>
+            </Border>
+
+            <Border x:Name="borderRules" BorderBrush="#00000000" BorderThickness="1" HorizontalAlignment="Left" Height="41" VerticalAlignment="Top" Width="128"
+                    RenderTransformOrigin="0.5,0.5" Background="#FFECE38C" Canvas.Left="161" Canvas.Top="130">
+                <Border.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="11.997"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Border.RenderTransform>
+                <Button x:Name="btnRulesGame" Background="Transparent" FontWeight="Medium" Cursor="Hand" Style="{DynamicResource basicButton}"
+                        Foreground="#FF654070" FontSize="18" Content="Game Rules" Click="btnRulesGame_Click"></Button>
+            </Border>
+            
+            <Border x:Name="borderGetCredit" BorderBrush="#00000000" BorderThickness="1" HorizontalAlignment="Left" Height="41" VerticalAlignment="Bottom" 
+        		Width="129" RenderTransformOrigin="0.5,0.5" Background="#FF664E9B" Canvas.Left="163" Canvas.Top="86">
+                <Border.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-367.49"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Border.RenderTransform>
+                <Button x:Name="btnGetCredit" Background="Transparent" FontWeight="Medium" Cursor="Hand" Style="{DynamicResource basicButton}"
+                        Foreground="#FFECE38C" FontSize="18" Content="Get Credit" Click="btnGetCredit_Click"></Button>
+            </Border>
+
+            <Ellipse x:Name="ellipsePlay" HorizontalAlignment="Left" Height="179" Stroke="#9BB9BF" StrokeThickness="2" VerticalAlignment="Top" Width="179" 
+                     RenderTransformOrigin="0.5,0.5" Canvas.Top="25">
+                <Ellipse.Fill>
+                    <RadialGradientBrush>
+                        <GradientStop Color="#FF0477BF" Offset="1"/>
+                        <GradientStop Color="White"/>
+                        <GradientStop Color="#FFAED3EA" Offset="0.8"/>
+                    </RadialGradientBrush>
+                </Ellipse.Fill>
+            </Ellipse>
+
+            <Button x:Name="btnStartGame" Style="{StaticResource btnGlass}" HorizontalAlignment="Left" Width="97" Height="72" Canvas.Left="51" 
+                    Canvas.Top="79" Click="btnStartGame_Click">
+                <TextBlock Text="START" FontSize="14" FontWeight="Medium" Foreground="White"/>
+            </Button>
+
+        </Canvas>
+        <!--Main menu of game-->
+        
+        <!--The game info board-->
+        <StackPanel HorizontalAlignment="Left" Height="119" Margin="29,269,0,0" VerticalAlignment="Top" Width="552">
+            
+            <TextBlock x:Name="txtRules"  FontSize="16" TextWrapping="Wrap" FontWeight="Medium" Foreground="#FF654070"></TextBlock>
+            
+            <ListBox x:Name="listAchievements" ItemsSource="{Binding}" Visibility="Collapsed"/>
+        
+        </StackPanel>
+        <!--The game info board-->
+
+        <Controls:UserInfoControl x:Name="myUser" Visibility="Collapsed" HorizontalAlignment="Left" Margin="404,24,0,0" VerticalAlignment="Top"/>
+    </Grid>
+</Window>

@@ -1,0 +1,6 @@
+D:\Flesh\FruitMachine\RandomRouletteLibrary\bin\Release\RandomRouletteLibrary.dll
+D:\Flesh\FruitMachine\RandomRouletteLibrary\bin\Release\RandomRouletteLibrary.pdb
+D:\Flesh\FruitMachine\RandomRouletteLibrary\bin\Release\Newtonsoft.Json.dll
+D:\Flesh\FruitMachine\RandomRouletteLibrary\bin\Release\Newtonsoft.Json.xml
+D:\Flesh\FruitMachine\RandomRouletteLibrary\obj\Release\RandomRouletteLibrary.dll
+D:\Flesh\FruitMachine\RandomRouletteLibrary\obj\Release\RandomRouletteLibrary.pdb

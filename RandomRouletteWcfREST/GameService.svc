@@ -1,0 +1,2 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="RandomRouletteWcfREST.GameService" 
+    Factory="System.ServiceModel.Activation.WebServiceHostFactory" CodeBehind="GameService.svc.cs" %>
