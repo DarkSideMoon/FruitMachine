@@ -11,3 +11,4 @@ D:\Flesh\FruitMachine\RandomRouletteLibrary\bin\Debug\Newtonsoft.Json.dll
 D:\Flesh\FruitMachine\RandomRouletteLibrary\bin\Debug\Newtonsoft.Json.xml
 D:\Flesh\FruitMachine\RandomRouletteLibrary\obj\Debug\RandomRouletteLibrary.dll
 D:\Flesh\FruitMachine\RandomRouletteLibrary\obj\Debug\RandomRouletteLibrary.pdb
+D:\Flesh\FruitMachine\RandomRouletteLibrary\obj\Debug\RandomRouletteLibrary.csprojResolveAssemblyReference.cache
