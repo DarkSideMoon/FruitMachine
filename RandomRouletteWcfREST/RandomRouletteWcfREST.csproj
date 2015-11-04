@@ -73,12 +73,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\Achievements\Achiv1.png" />
     <Content Include="App_Data\Achievements\Achiv2.png" />
-    <Content Include="App_Data\Achievements\Achiv3.png" />
     <Content Include="App_Data\Achievements\Achiv4.png" />
-    <Content Include="App_Data\Achievements\Achiv5.png" />
     <Content Include="App_Data\Achievements\Achiv6.png" />
+    <Content Include="App_Data\Achievements\Achiv8.png" />
+    <Content Include="App_Data\Achievements\Achiv9.png" />
+    <Content Include="App_Data\Achievements\Achiv10.png" />
     <Content Include="App_Data\Achievements\banana-wallpapers.jpg" />
     <Content Include="App_Data\Achievements\minion-1.jpg" />
     <Content Include="App_Data\Achievements\tumblr_n5izfjoSP01qjdvoio1_500.png" />

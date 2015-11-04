@@ -60,6 +60,7 @@ namespace RandomRouletteWcfREST
 
         public bool SendPoints(string input, string nickName)
         {
+            Achievement achievement = new Achievement();
             List<Achievement> achs = new List<Achievement>();
             
             // Read from xml file current user 
@@ -71,26 +72,11 @@ namespace RandomRouletteWcfREST
 
             // Get the current points and check if user has same achievement 
             int points = int.Parse(input);
-            bool isBrown = points >= 0 && points <= 200 && !userAchievements.Any(p => p.SmallDescription == "Get 200 points");
-            bool isGreen = points >= 201 && points <= 599 && !userAchievements.Any(p => p.SmallDescription == "Get 400 points");
-            bool isPink = points >= 600 && points <= 799 && !userAchievements.Any(p => p.SmallDescription == "Get 600 points");
-            bool isBlue = points >= 800 && points <= 899 && !userAchievements.Any(p => p.SmallDescription == "Get 800 points");
-            bool isRed = points >= 900 && points <= 999 && !userAchievements.Any(p => p.SmallDescription == "Get 900 points");
-            bool isGold = points >= 1000 && !userAchievements.Any(p => p.SmallDescription == "Get 1000 points");
+            Tuple<string, int> tupleRes = achievement.Result(points, userAchievements.ToList());
 
-            // Add to list the achievement 
-            if (isBrown)
-                achs.Add(new Achievement("Get 200 points", true, PathToAppData("Achievements", "Achiv1.png")));
-            else if (isGreen)
-                achs.Add(new Achievement("Get 400 points", true, PathToAppData("Achievements", "Achiv2.png")));
-            else if (isPink)
-                achs.Add(new Achievement("Get 600 points", true, PathToAppData("Achievements", "Achiv3.png")));
-            else if (isBlue)
-                achs.Add(new Achievement("Get 800 points", true, (PathToAppData("Achievements", "Achiv4.png"))));
-            else if (isRed)
-                achs.Add(new Achievement("Get 900 points", true, PathToAppData("Achievements", "Achiv5.png")));
-            else if (isGold)
-                achs.Add(new Achievement("Get 1000 points", true, PathToAppData("Achievements", "Achiv6.png")));
+            if(tupleRes.Item1 != string.Empty && tupleRes.Item2 != 0)
+                achs.Add(new Achievement(tupleRes.Item2, tupleRes.Item1, true, PathToAppData("Achievements",
+                                         "Achiv" + tupleRes.Item2 + ".png")));
 
             // If user get achievement we increment the level of user
             if (achs.Count != 0)

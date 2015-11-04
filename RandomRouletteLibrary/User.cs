@@ -114,6 +114,7 @@ namespace RandomRouletteLibrary
         }
         #endregion
 
+        #region Methods
         /// <summary>
         /// Get additional points for user 
         /// </summary>
@@ -234,15 +235,21 @@ namespace RandomRouletteLibrary
 
                     XmlElement desc = xml.CreateElement("Description");
                     desc.InnerText = achieve.SmallDescription;
+                    
                     XmlElement isDone = xml.CreateElement("IsDone");
                     isDone.InnerText = achieve.IsDone.ToString();
+                    
                     XmlElement imagePath = xml.CreateElement("Image");
                     imagePath.InnerText = achieve.ImagePath;
+                    
+                    XmlElement itemId = xml.CreateElement("IdItem");
+                    itemId.InnerText = achieve.IdItem.ToString();
 
                     // The header of Item
                     lastItem.AppendChild(newItem);
 
                     // The child of new Item
+                    newItem.AppendChild(itemId);
                     newItem.AppendChild(desc);
                     newItem.AppendChild(isDone);
                     newItem.AppendChild(imagePath);
@@ -296,11 +303,12 @@ namespace RandomRouletteLibrary
                             XmlNodeList achieveList = ach.SelectNodes("Item");
                             foreach (XmlNode item3 in achieveList)
                             {
+                                int id = Convert.ToInt32(item3["IdItem"].InnerText);
                                 string desc = item3["Description"].InnerText;
                                 bool isDone = Convert.ToBoolean(item3["IsDone"].InnerText);
                                 string image = item3["Image"].InnerText;
 
-                                list.Add(new Achievement(desc, isDone, image));
+                                list.Add(new Achievement(id, desc, isDone, image));
                             }
                         }
                     }
@@ -312,5 +320,7 @@ namespace RandomRouletteLibrary
         {
             return this.NickName;
         }
+
+        #endregion
     }
 }

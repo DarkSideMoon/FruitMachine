@@ -52,6 +52,7 @@
   <ItemGroup>
     <Compile Include="Achievement.cs" />
     <Compile Include="DataRoulette.cs" />
+    <Compile Include="MethodsExtensions.cs" />
     <Compile Include="MyImage.cs" />
     <Compile Include="MyNumber.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
