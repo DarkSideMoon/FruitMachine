@@ -11,8 +11,14 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RandomRouletteLibrary", "RandomRouletteLibrary\RandomRouletteLibrary.csproj", "{0F52779C-15FF-458E-BB9A-F74CC67ADEEB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestRandomRoulette", "TestRandomRoulette\TestRandomRoulette.csproj", "{5F14DC46-FACD-4B64-A3C4-29463A8A5D15}"
+	ProjectSection(ProjectDependencies) = postProject
+		{0F52779C-15FF-458E-BB9A-F74CC67ADEEB} = {0F52779C-15FF-458E-BB9A-F74CC67ADEEB}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RandomRouletteWcfREST", "RandomRouletteWcfREST\RandomRouletteWcfREST.csproj", "{B92C1D3D-908D-465B-9DA8-2689F8DD1809}"
+	ProjectSection(ProjectDependencies) = postProject
+		{0F52779C-15FF-458E-BB9A-F74CC67ADEEB} = {0F52779C-15FF-458E-BB9A-F74CC67ADEEB}
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{BF838A7B-3FEB-48FE-8198-BC9E55092535}"
 	ProjectSection(SolutionItems) = preProject
