@@ -1,6 +1,6 @@
 language: csharp
 solution: RandomThreadRoulette.sln
 install: 
-	- nuget restore RandomThreadRoulette.sln
+- nuget restore RandomThreadRoulette.sln
 mono:
-	- latest
+- latest
