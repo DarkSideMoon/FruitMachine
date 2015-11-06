@@ -1,6 +1,10 @@
 language: csharp
 solution: RandomThreadRoulette.sln
-install: 
-- nuget restore RandomThreadRoulette.sln
-mono:
-- latest
+script:
+  - xbuild /p:Configuration=Debug RandomThreadRoulette.sln
+#before_install:
+#  - sudo apt-get install nunit-console
+before_script:
+  - nuget restore RandomThreadRoulette.sln
+#after_script:
+#  - nunit-console Tests/bin/Debug/Tests.dll
