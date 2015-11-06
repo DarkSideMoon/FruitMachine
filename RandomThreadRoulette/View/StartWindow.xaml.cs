@@ -47,7 +47,18 @@ namespace RandomThreadRoulette.View
             }
 
             string userName = txtNickName.Text;
-             
+
+            //Thread userLoadThread = new Thread(new ParameterizedThreadStart(delegate
+            //    {
+            //        us = service.LoadUserInfo(userName);
+            //    }));
+
+            //Task myTask = new Task((Action)delegate { us = service.LoadUserInfo(userName); });
+
+            //userLoadThread.Join();
+
+
+
             Thread userLoadThread = new Thread(new ThreadStart(() =>
             {
                 // Create our context, and install it:
